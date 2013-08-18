@@ -125,29 +125,49 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZy-ko-NTO">
-                                <rect key="frame" x="0.0" y="72" width="320" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="daE-Ic-pWp"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rma-Od-2T6">
-                                <rect key="frame" x="20" y="280" width="280" height="288"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ED-MR-Y9y">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="uZy-ko-NTO">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="202" id="KRm-6R-ikf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rma-Od-2T6">
+                                        <rect key="frame" x="20" y="210" width="280" height="294"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="294" id="8BX-lK-Nkz"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Rma-Od-2T6" secondAttribute="bottom" constant="20" symbolic="YES" id="4tz-iy-QXH"/>
+                                    <constraint firstItem="uZy-ko-NTO" firstAttribute="leading" secondItem="7ED-MR-Y9y" secondAttribute="leading" id="CcB-Vl-E35"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rma-Od-2T6" secondAttribute="trailing" constant="20" symbolic="YES" id="D0J-dT-bn6"/>
+                                    <constraint firstItem="uZy-ko-NTO" firstAttribute="centerX" secondItem="7ED-MR-Y9y" secondAttribute="centerX" id="GUG-MU-ifs"/>
+                                    <constraint firstItem="uZy-ko-NTO" firstAttribute="top" secondItem="7ED-MR-Y9y" secondAttribute="top" id="HeM-dS-L2f"/>
+                                    <constraint firstItem="Rma-Od-2T6" firstAttribute="leading" secondItem="7ED-MR-Y9y" secondAttribute="leading" constant="20" symbolic="YES" id="Oez-Oo-dGn"/>
+                                    <constraint firstItem="uZy-ko-NTO" firstAttribute="centerX" secondItem="Rma-Od-2T6" secondAttribute="centerX" id="TvL-hj-pln"/>
+                                    <constraint firstItem="Rma-Od-2T6" firstAttribute="top" secondItem="uZy-ko-NTO" secondAttribute="bottom" constant="8" symbolic="YES" id="yDH-PV-PhG"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ozq-Mc-Br4" firstAttribute="leading" secondItem="3JL-5N-vg3" secondAttribute="leading" id="EaU-VR-XDr"/>
-                            <constraint firstItem="ozq-Mc-Br4" firstAttribute="trailing" secondItem="3JL-5N-vg3" secondAttribute="trailing" id="Iqw-pk-vBE"/>
-                            <constraint firstItem="uZy-ko-NTO" firstAttribute="top" secondItem="3JL-5N-vg3" secondAttribute="top" constant="72" id="Qa2-Sl-ACu"/>
-                            <constraint firstItem="ozq-Mc-Br4" firstAttribute="top" secondItem="3JL-5N-vg3" secondAttribute="top" id="cfN-rC-7cG"/>
-                            <constraint firstItem="uZy-ko-NTO" firstAttribute="trailing" secondItem="3JL-5N-vg3" secondAttribute="trailing" id="d3r-zW-yfZ"/>
-                            <constraint firstItem="uZy-ko-NTO" firstAttribute="leading" secondItem="3JL-5N-vg3" secondAttribute="leading" id="qV1-Ap-nPP"/>
+                            <constraint firstItem="ozq-Mc-Br4" firstAttribute="trailing" secondItem="7ED-MR-Y9y" secondAttribute="trailing" id="0ec-U1-Z9D"/>
+                            <constraint firstAttribute="bottom" secondItem="7ED-MR-Y9y" secondAttribute="bottom" id="1XJ-QD-RuG"/>
+                            <constraint firstItem="ozq-Mc-Br4" firstAttribute="top" secondItem="3JL-5N-vg3" secondAttribute="top" id="ETf-VI-13a"/>
+                            <constraint firstItem="ozq-Mc-Br4" firstAttribute="leading" secondItem="3JL-5N-vg3" secondAttribute="leading" id="R4K-mp-hhW"/>
+                            <constraint firstItem="7ED-MR-Y9y" firstAttribute="top" secondItem="ozq-Mc-Br4" secondAttribute="bottom" id="dZw-pG-8PC"/>
+                            <constraint firstAttribute="trailing" secondItem="7ED-MR-Y9y" secondAttribute="trailing" id="ns8-Va-Ydt"/>
+                            <constraint firstItem="7ED-MR-Y9y" firstAttribute="leading" secondItem="ozq-Mc-Br4" secondAttribute="leading" id="yPD-2w-Ck6"/>
                         </constraints>
                     </view>
                     <connections>

@@ -225,7 +225,7 @@ UIViewControllerContextTransitioning> {
     CGFloat toZoomScale = 6.f;
     CGFloat fromZoomScale = 3.2f;
     
-    BOOL applyAlpha = YES;
+    BOOL applyAlpha = NO;
     
     ////////////////////////////////////////////////////////////////////////////////////////////////
     if (self.isPresentation) {
@@ -258,10 +258,14 @@ UIViewControllerContextTransitioning> {
         //////////////////////////////////////////////////////////////////////////////////////////
         
         
+        /*
         fromView.layer.anchorPoint = newAnchorPoint;
         newFromViewCenter = CGPointMake(newAnchorPoint.x * CGRectGetWidth(fromView.bounds),
                                         newAnchorPoint.y * CGRectGetHeight(fromView.bounds));
         fromView.center = newFromViewCenter;
+        */
+        
+        [self setAnchorPoint:newAnchorPoint forView:fromView];
         
         //////////////////////////////////////////////////////////////////////////////////////////
         //Card Rect Helper
@@ -281,11 +285,9 @@ UIViewControllerContextTransitioning> {
         
         
     } else {
-        toView.layer.anchorPoint = newAnchorPoint;
-        toView.center = newFromViewCenter;
-        
         toView.transform = CGAffineTransformScale(toView.transform, fromZoomScale, fromZoomScale);
-        //toView.center = newFromViewCenter;
+        //toView.layer.anchorPoint = newAnchorPoint;
+        [self setAnchorPoint:newAnchorPoint forView:toView];
         
         [inView insertSubview:toView belowSubview:fromView];
     }
@@ -320,15 +322,18 @@ UIViewControllerContextTransitioning> {
                                               animations:^{
                                                   if (applyAlpha) fromView.alpha = 0;}
                                               completion:^(BOOL finished) {}];
-                                                  
                              
-                             [self setAnchorPoint:CGPointMake(0.5, 0.5) forView:toView];
-                             
-                             toView.center = inView.center;
                              toView.transform = CGAffineTransformScale(toView.transform, 1/fromZoomScale, 1/fromZoomScale);
                          }
                      }
                      completion:^(BOOL finished) {
+                         if (self.isPresentation) {
+                             ;
+                         } else {
+                             //Finish
+                             [self setAnchorPoint:CGPointMake(0.5, 0.5) forView:toView];
+                         }
+     
                          [transitionContext completeTransition:finished];
                      }];
 }
@@ -496,7 +501,6 @@ UIViewControllerContextTransitioning> {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-
 -(void)setAnchorPoint:(CGPoint)anchorPoint forView:(UIView *)view
 {
     CGPoint newPoint = CGPointMake(view.bounds.size.width * anchorPoint.x, view.bounds.size.height * anchorPoint.y);
@@ -516,6 +520,53 @@ UIViewControllerContextTransitioning> {
     view.layer.position = position;
     view.layer.anchorPoint = anchorPoint;
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////
+- (BOOL)shouldAutomaticallyForwardRotationMethods
+{
+    return YES;
+}
+
+/*
+ willRotateToInterfaceOrientation:duration:
+ willAnimateRotationToInterfaceOrientation:duration:
+ didRotateFromInterfaceOrientation:
+ */
+
+/*
+ if (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
+ {
+ CGAffineTransform transform = self.view.transform;
+ 
+ // Use the status bar frame to determine the center point of the window's content area.
+ CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
+ CGRect bounds = CGRectMake(0, 0, statusBarFrame.size.height, statusBarFrame.origin.x);
+ CGPoint center = CGPointMake(60.0, bounds.size.height / 2.0);
+ 
+ // Set the center point of the view to the center point of the window's content area.
+ //primaryView.center = center;
+ view.center = center;
+ 
+ // Rotate the view 90 degrees around its new center point.
+ transform = CGAffineTransformRotate(transform, (M_PI / 2.0));
+ //primaryView.transform = transform;
+ view.transform = transform;
+}
+ */
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft;
+}
+
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
