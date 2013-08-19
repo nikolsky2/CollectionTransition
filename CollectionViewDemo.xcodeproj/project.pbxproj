@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D81819C717B4A667003D0D7D /* MyCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D81819C617B4A667003D0D7D /* MyCustomSegue.m */; };
 		D81819C917B8D514003D0D7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81819C817B8D514003D0D7D /* QuartzCore.framework */; };
 		F44AF50B16AEE9820052F2BD /* RecipeCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F44AF50A16AEE9820052F2BD /* RecipeCollectionHeaderView.m */; };
 		F44AF51616B027100052F2BD /* footer_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = F44AF51516B027100052F2BD /* footer_banner.png */; };
@@ -21,7 +20,6 @@
 		F44B2735169DBB6100746E64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F44B2734169DBB6100746E64 /* Default@2x.png */; };
 		F44B2737169DBB6100746E64 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F44B2736169DBB6100746E64 /* Default-568h@2x.png */; };
 		F44B273A169DBB6100746E64 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B2738169DBB6100746E64 /* MainStoryboard.storyboard */; };
-		F44B273D169DBB6100746E64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B273C169DBB6100746E64 /* ViewController.m */; };
 		F44B2745169DBFEB00746E64 /* RecipeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B2744169DBFEB00746E64 /* RecipeCollectionViewController.m */; };
 		F44B2757169DC1F300746E64 /* angry_birds_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F44B2747169DC1F300746E64 /* angry_birds_cake.jpg */; };
 		F44B2758169DC1F300746E64 /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F44B2748169DC1F300746E64 /* creme_brelee.jpg */; };
@@ -49,8 +47,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D81819C517B4A667003D0D7D /* MyCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomSegue.h; sourceTree = "<group>"; };
-		D81819C617B4A667003D0D7D /* MyCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomSegue.m; sourceTree = "<group>"; };
 		D81819C817B8D514003D0D7D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F44AF50916AEE9820052F2BD /* RecipeCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeCollectionHeaderView.h; sourceTree = "<group>"; };
 		F44AF50A16AEE9820052F2BD /* RecipeCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCollectionHeaderView.m; sourceTree = "<group>"; };
@@ -69,8 +65,6 @@
 		F44B2734169DBB6100746E64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F44B2736169DBB6100746E64 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F44B2739169DBB6100746E64 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		F44B273B169DBB6100746E64 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F44B273C169DBB6100746E64 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F44B2743169DBFEB00746E64 /* RecipeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeCollectionViewController.h; sourceTree = "<group>"; };
 		F44B2744169DBFEB00746E64 /* RecipeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCollectionViewController.m; sourceTree = "<group>"; };
 		F44B2747169DC1F300746E64 /* angry_birds_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angry_birds_cake.jpg; sourceTree = "<group>"; };
@@ -161,12 +155,8 @@
 				F44AF50916AEE9820052F2BD /* RecipeCollectionHeaderView.h */,
 				F44AF50A16AEE9820052F2BD /* RecipeCollectionHeaderView.m */,
 				F44B2738169DBB6100746E64 /* MainStoryboard.storyboard */,
-				F44B273B169DBB6100746E64 /* ViewController.h */,
-				F44B273C169DBB6100746E64 /* ViewController.m */,
 				F4546D2A16CFD39900BAC939 /* RecipeViewController.h */,
 				F4546D2B16CFD39900BAC939 /* RecipeViewController.m */,
-				D81819C517B4A667003D0D7D /* MyCustomSegue.h */,
-				D81819C617B4A667003D0D7D /* MyCustomSegue.m */,
 				F44B2743169DBFEB00746E64 /* RecipeCollectionViewController.h */,
 				F44B2744169DBFEB00746E64 /* RecipeCollectionViewController.m */,
 				F44B2767169DC3FB00746E64 /* RecipeViewCell.h */,
@@ -313,9 +303,7 @@
 			files = (
 				F44B272D169DBB6100746E64 /* main.m in Sources */,
 				F44B2731169DBB6100746E64 /* AppDelegate.m in Sources */,
-				F44B273D169DBB6100746E64 /* ViewController.m in Sources */,
 				F44B2745169DBFEB00746E64 /* RecipeCollectionViewController.m in Sources */,
-				D81819C717B4A667003D0D7D /* MyCustomSegue.m in Sources */,
 				F44B2769169DC3FC00746E64 /* RecipeViewCell.m in Sources */,
 				F44AF50B16AEE9820052F2BD /* RecipeCollectionHeaderView.m in Sources */,
 				F4546D2C16CFD39900BAC939 /* RecipeViewController.m in Sources */,
@@ -405,7 +393,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Products;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -421,7 +409,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Products;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
